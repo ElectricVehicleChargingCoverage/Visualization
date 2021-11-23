@@ -19,7 +19,7 @@
     },
     {
       "name": "chargers",
-      "url": "data/airports.csv",
+      "url": "https://raw.githubusercontent.com/ElectricVehicleChargingCoverage/Visualization/main/data/chargers.json",
       "format": {"type": "csv", "parse": "auto"},
       "transform": [
         {
