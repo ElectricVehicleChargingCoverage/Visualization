@@ -24,7 +24,7 @@
   "data": [
     {
       "name": "states",
-      "url": "data/us-10m.json",
+      "url": "https://raw.githubusercontent.com/ElectricVehicleChargingCoverage/Visualization/main/data/us-10m.json",
       "format": {"type": "topojson", "feature": "states"},
       "transform": [
         {
@@ -35,7 +35,7 @@
     },
     {
       "name": "traffic",
-      "url": "data/flights-airport.csv",
+      "url": "https://raw.githubusercontent.com/ElectricVehicleChargingCoverage/Visualization/main/data/flights-airport.csv",
       "format": {"type": "csv", "parse": "auto"},
       "transform": [
         {
@@ -47,7 +47,7 @@
     },
     {
       "name": "airports",
-      "url": "data/airports.csv",
+      "url": "https://raw.githubusercontent.com/ElectricVehicleChargingCoverage/Visualization/main/data/airports.csv",
       "format": {"type": "csv", "parse": "auto"},
       "transform": [
         {
