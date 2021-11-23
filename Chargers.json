@@ -9,7 +9,7 @@
     {
       "name": "germany",
       "url": "https://raw.githubusercontent.com/ElectricVehicleChargingCoverage/Visualization/main/data/germany.json",
-      "format": {"type": "topojson", "feature": "states"},
+      "format": {"type": "topojson", "feature": "germany"},
       "transform": [
         {
           "type": "geopath",
@@ -25,7 +25,7 @@
         {
           "type": "geopoint",
           "projection": "projection",
-          "fields": ["long", "lat"]
+          "fields": ["lon", "lat"]
         }
       ]
     }
