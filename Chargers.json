@@ -34,7 +34,7 @@
   "projections": [
     {
       "name": "projection",
-      "type": "albersUsa",
+      "type": "mercator",
       "scale": 1200,
       "translate": [{"signal": "width / 2"}, {"signal": "height / 2"}]
     }
