@@ -9,7 +9,7 @@
     {
       "name": "germany",
       "url": "https://raw.githubusercontent.com/ElectricVehicleChargingCoverage/Visualization/main/data/germany.json",
-      "format": {"type": "topojson", "feature": "germany"},
+      "format": {"type": "topojson", "feature": "DEU_adm2"},
       "transform": [
         {
           "type": "geopath",
