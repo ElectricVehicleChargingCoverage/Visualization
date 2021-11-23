@@ -19,7 +19,7 @@
     },
     {
       "name": "chargers",
-      "url": "https://raw.githubusercontent.com/ElectricVehicleChargingCoverage/Visualization/main/data/chargers.json",
+      "url": "https://raw.githubusercontent.com/ElectricVehicleChargingCoverage/Visualization/main/data/chargers.csv",
       "format": {"type": "csv", "parse": "auto"},
       "transform": [
         {
