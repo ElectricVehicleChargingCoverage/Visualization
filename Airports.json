@@ -10,8 +10,8 @@
       "name": "hover",
       "value": null,
       "on": [
-        {"events": "@cell:mouseover", "update": "datum"},
-        {"events": "@cell:mouseout", "update": "null"}
+        {"events": "symbol:mouseover", "update": "datum"},
+        {"events": "symbol:mouseout", "update": "null"}
       ]
     },
     {
@@ -69,37 +69,10 @@
           "expr": "datum.x != null && datum.y != null"
         },
         {
-          "type": "voronoi", "x": "x", "y": "y"
-        },
-        {
           "type": "collect", "sort": {
             "field": "traffic.flights",
             "order": "descending"
           }
-        }
-      ]
-    },
-    {
-      "name": "routes",
-      "url": "data/flights-airport.csv",
-      "format": {"type": "csv", "parse": "auto"},
-      "transform": [
-        {
-          "type": "filter",
-          "expr": "hover && hover.iata == datum.origin"
-        },
-        {
-          "type": "lookup",
-          "from": "airports", "key": "iata",
-          "fields": ["origin", "destination"], "as": ["source", "target"]
-        },
-        {
-          "type": "filter",
-          "expr": "datum.source && datum.target"
-        },
-        {
-          "type": "linkpath",
-          "shape": "line"
         }
       ]
     }
@@ -151,31 +124,6 @@
         "update": {
           "x": {"field": "x"},
           "y": {"field": "y"}
-        }
-      }
-    },
-    {
-      "type": "path",
-      "name": "cell",
-      "from": {"data": "airports"},
-      "encode": {
-        "enter": {
-          "fill": {"value": "transparent"}
-        },
-        "update": {
-          "path": {"field": "path"}
-        }
-      }
-    },
-    {
-      "type": "path",
-      "interactive": false,
-      "from": {"data": "routes"},
-      "encode": {
-        "enter": {
-          "path": {"field": "path"},
-          "stroke": {"value": "black"},
-          "strokeOpacity": {"value": 0.35}
         }
       }
     },
